@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #212121;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.btn {
+  all: unset;
+  border-radius: 1.5rem;
+  text-align: center;
+}
+
+.btn_primary {
+  background-color: yellow;
+  color: black;
+  font-size: 24px;
+  width: 200px;
+  height: 50px;
+}
+
+.btn_secondary {
+  background-color: yellow;
+  color: black;
+  font-size: 18px;
+  width: 120px;
+  height: 30px;
+}
