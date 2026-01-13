@@ -1,20 +1,41 @@
 "use strict";
 
-const cardsMap = document.getElementById("map");
+class GameLogic {}
 
-const cardsInGridRow = 4;
+class MemoryGame {
+  constructor() {}
 
-for (let i = 0; i < cardsInGridRow ** 2; ++i) {
-  const card = document.createElement("div");
-  card.className = "card";
+  init() {
+    this.generateCards();
+    this.bindEvents();
+  }
 
-  cardsMap.appendChild(card);
+  generateCards() {
+    const cardsMap =
+      document.getElementById("map");
+    const cardsInGridRow = 4;
+    for (
+      let i = 0;
+      i < cardsInGridRow ** 2;
+      ++i
+    ) {
+      const card = document.createElement("div");
+      card.className = "card";
+
+      cardsMap.appendChild(card);
+    }
+  }
+
+  bindEvents() {
+    const cards =
+      document.querySelectorAll(".card");
+    cards.forEach((card) => {
+      card.addEventListener("click", () => {
+        card.classList.toggle("active");
+      });
+    });
+  }
 }
 
-const cards = document.querySelectorAll(".card");
-
-cards.forEach((card) => {
-  card.addEventListener("click", () => {
-    card.classList.toggle("active");
-  });
-});
+// // start application
+// const app = new MemoryGame().init();

@@ -40,7 +40,8 @@ body {
   justify-content: space-between;
 }
 
-.control-panel button {
+.control-panel button,
+.control-panel output {
   height: 100%;
   width: 105px;
   color: #f5f7fa;
@@ -56,16 +57,27 @@ body {
   height: 445px;
 }
 
-.button-group {
+.output-group {
   display: inherit;
   gap: 25px;
 }
 
-.button-group button {
-  background-color: #2d3a5a;
+.control-panel button,
+.control-panel output {
+  width: auto;
+  padding: 0 15px;
 }
 
-.single-button {
+.output-group output {
+  background-color: #2d3a5a;
+  cursor: default;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.reset-button {
   cursor: pointer;
   background-color: #e74a3b;
 }

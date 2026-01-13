@@ -21,16 +21,20 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
-    <script src="./script.js" defer></script>
+    <script
+      src="./script.js"
+      type="module"
+      defer
+    ></script>
   </head>
   <body>
     <div class="game-area" id="area">
       <div class="control-panel">
-        <div class="button-group">
-          <button>1</button>
-          <button>2</button>
+        <div class="output-group">
+          <output>Moves: 20</output>
+          <output>Timer: 30 sec</output>
         </div>
-        <button class="single-button">
+        <button class="reset-button">
           Reset
         </button>
       </div>
